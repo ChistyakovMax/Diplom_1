@@ -7,15 +7,15 @@ import static org.junit.Assert.*;
 
 public class IngredientTypeTest {
 
-    @Before
-    public void setUp() throws Exception {
+    @Test
+    public void ingredientTypeReturnSAUCE(){
+        assertEquals("должен вернуться SAUCE", "SAUCE", IngredientType.SAUCE.name());
     }
 
     @Test
-    public void values() {
+    public void ingredientTypeReturnFILLING(){
+        assertEquals("должен вернуться FILLING", "FILLING", IngredientType.FILLING.name());
     }
 
-    @Test
-    public void valueOf() {
-    }
+
 }
