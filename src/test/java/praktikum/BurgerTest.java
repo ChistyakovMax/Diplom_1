@@ -2,13 +2,16 @@ package praktikum;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
 import static org.junit.Assert.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
 
     @Mock
@@ -17,7 +20,7 @@ public class BurgerTest {
     @Mock
     Ingredient ingredient;
 
-    //@Mock
+    @Mock
     List<Ingredient> ingredients;
 
     Burger burger;
@@ -41,7 +44,8 @@ public class BurgerTest {
 
     @Test
     public void removeIngredient(){
-        //Mockito.when(ingredients.remove(Mockito.anyInt())).thenReturn(ingredient);
+        //ingredients.add(ingredient);
+        Mockito.when(ingredients.remove(1)).thenReturn(ingredient);
         burger.ingredients = ingredients;
         burger.removeIngredient(1);
         Mockito.verify(burger.ingredients).remove(1);
@@ -49,21 +53,20 @@ public class BurgerTest {
     }
 
     @Test
-    public void moveIngredient(){
+    public void moveIngredientCallMethodIngridientsMoved(){
 
+        int index = 1;
+        int newIndex = 2;
+
+        burger.ingredients = ingredients;
+        burger.moveIngredient(index,newIndex);
+        Mockito.verify(burger.ingredients).add(newIndex, ingredients.remove(index));
+        Mockito.verify(burger.ingredients).remove(index);
     }
 
     @Test
-    public void getPriceCallMethodReturnPrice(){
+    public void moveIngredient(){
 
-        Mockito.when(ingredient.getPrice()).thenReturn(5F);
-        Mockito.when(bun.getPrice()).thenReturn(10F);
-
-
-        burger.bun = bun;
-        burger.ingredients = ingredients;
-        burger.ingredients.add(ingredient);
-        assertEquals("comment", 25F, burger.getPrice());
     }
 
     @Test
