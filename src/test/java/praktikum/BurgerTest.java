@@ -17,6 +17,7 @@ public class BurgerTest {
     @Mock
     Ingredient ingredient;
 
+    //@Mock
     List<Ingredient> ingredients;
 
     Burger burger;
@@ -40,6 +41,10 @@ public class BurgerTest {
 
     @Test
     public void removeIngredient(){
+        //Mockito.when(ingredients.remove(Mockito.anyInt())).thenReturn(ingredient);
+        burger.ingredients = ingredients;
+        burger.removeIngredient(1);
+        Mockito.verify(burger.ingredients).remove(1);
 
     }
 
@@ -53,10 +58,11 @@ public class BurgerTest {
 
         Mockito.when(ingredient.getPrice()).thenReturn(5F);
         Mockito.when(bun.getPrice()).thenReturn(10F);
-        ingredients.add(ingredient);
+
 
         burger.bun = bun;
         burger.ingredients = ingredients;
+        burger.ingredients.add(ingredient);
         assertEquals("comment", 25F, burger.getPrice());
     }
 
