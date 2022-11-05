@@ -1,35 +1,19 @@
 package praktikum;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class BurgerGetPriceParameterizedTest {
-    @Mock
-    Bun bun;
+public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTest{
 
-    @Mock
-    Ingredient ingredient;
-
-    Burger burger;
-    private final int numOfIngridients; //кол-во ингридиентов в бургере
-    private final float expected;
 
     public BurgerGetPriceParameterizedTest(int numOfIngridients, float expected) {
-        this.numOfIngridients = numOfIngridients;
-        this.expected = expected;
-    }
-
-    @Before
-    public void init() {
-
+        super(numOfIngridients,expected);
     }
 
     @Parameterized.Parameters
