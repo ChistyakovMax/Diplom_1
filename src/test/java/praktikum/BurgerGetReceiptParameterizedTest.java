@@ -24,57 +24,57 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
     @Parameterized.Parameters
     public static Object[][] testData(){
         return new Object[][]{
-                {0, "", "(====  ====)\n" +
-                        "(====  ====)\n" +
-                        "\n" +
-                        "Price: 20,000000\n"},
+                {0, "", "(====  ====)\r\n" +
+                        "(====  ====)\r\n" +
+                        "\r\n" +
+                        "Price: 10,000000\r\n"},
 
 
 
-                {1, "n", "(==== n ====)\n" +
-                        "= filling n =\n" +
-                        "(==== n ====)\n" +
-                        "\n" +
-                        "Price: 20,000000\n"},
+                {1, "n", "(==== n ====)\r\n" +
+                        "= filling n =\r\n" +
+                        "(==== n ====)\r\n" +
+                        "\r\n" +
+                        "Price: 20,000000\r\n"},
 
 
 
-                {5, "name", "(==== name ====)\n" +
-                        "= filling name =\n" +
-                        "= filling name =\n" +
-                        "= filling name =\n" +
-                        "= filling name =\n" +
-                        "= filling name =\n" +
-                        "(==== name ====)\n" +
-                        "\n" +
-                        "Price: 60,000000\n"},
+                {5, "name", "(==== name ====)\r\n" +
+                        "= filling name =\r\n" +
+                        "= filling name =\r\n" +
+                        "= filling name =\r\n" +
+                        "= filling name =\r\n" +
+                        "= filling name =\r\n" +
+                        "(==== name ====)\r\n" +
+                        "\r\n" +
+                        "Price: 60,000000\r\n"},
 
 
 
-                {20, "NaMe01!)", "(==== NaMe01!) ====)\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "= filling NaMe01!) =\n" +
-                        "(==== NaMe01!) ====)\n" +
-                        "\n" +
-                        "Price: 210,000000\n"}
+                {20, "NaMe01!)", "(==== NaMe01!) ====)\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "= filling NaMe01!) =\r\n" +
+                        "(==== NaMe01!) ====)\r\n" +
+                        "\r\n" +
+                        "Price: 210,000000\r\n"}
         };
     }
 
