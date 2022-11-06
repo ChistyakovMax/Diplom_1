@@ -35,7 +35,7 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
                         "= filling n =\n" +
                         "(==== n ====)\n" +
                         "\n" +
-                        "Price: 10,000000\n"},
+                        "Price: 20,000000\n"},
 
 
 
@@ -47,7 +47,7 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
                         "= filling name =\n" +
                         "(==== name ====)\n" +
                         "\n" +
-                        "Price: 50,000000\n"},
+                        "Price: 60,000000\n"},
 
 
 
@@ -74,7 +74,7 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
                         "= filling NaMe01!) =\n" +
                         "(==== NaMe01!) ====)\n" +
                         "\n" +
-                        "Price: 200,000000\n"}
+                        "Price: 210,000000\n"}
         };
     }
 
