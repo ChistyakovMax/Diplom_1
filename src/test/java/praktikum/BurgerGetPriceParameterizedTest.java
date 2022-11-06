@@ -4,16 +4,17 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTest{
 
+    private float expected;
 
     public BurgerGetPriceParameterizedTest(int numOfIngridients, float expected) {
-        super(numOfIngridients,expected);
+        super(numOfIngridients);
+        this.expected = expected;
     }
 
     @Parameterized.Parameters
@@ -29,15 +30,10 @@ public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTe
 
     @Test
     public void getPriceCallMethodReturnPrice(){
-        burger = new Burger();
-        MockitoAnnotations.initMocks(this);
+        super.getBurger(numOfIngridients);
+
         Mockito.when(bun.getPrice()).thenReturn(5F);
         Mockito.when(ingredient.getPrice()).thenReturn(10F);
-
-        burger.bun = bun;
-        for (int i = 0; i < numOfIngridients; i++){
-            burger.ingredients.add(ingredient);
-        }
 
         assertEquals("comment", expected, burger.getPrice(), 0);
     }

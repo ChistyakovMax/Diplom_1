@@ -64,14 +64,4 @@ public class BurgerTest {
         Mockito.verify(burger.ingredients).remove(index);
     }
 
-    @Test
-    public void moveIngredient(){
-
-    }
-
-    @Test
-    public void getReceiptCallMethodReturnReceiptAsString(){
-
-    }
-
 }

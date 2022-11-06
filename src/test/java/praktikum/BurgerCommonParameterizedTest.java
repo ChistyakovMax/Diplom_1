@@ -1,6 +1,7 @@
 package praktikum;
 
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 public class BurgerCommonParameterizedTest {
     @Mock
@@ -11,10 +12,19 @@ public class BurgerCommonParameterizedTest {
 
     Burger burger;
     protected  int numOfIngridients; //кол-во ингридиентов в бургере
-    protected  float expected;
 
-    public BurgerCommonParameterizedTest(int numOfIngridients, float expected) {
+    public BurgerCommonParameterizedTest(int numOfIngridients) {
         this.numOfIngridients = numOfIngridients;
-        this.expected = expected;
+
+    }
+
+    //общий метод для создания бургера и наполнения его ингридиентами
+    public void getBurger(int numOfIngridients){
+        burger = new Burger();
+        MockitoAnnotations.initMocks(this);
+        burger.bun = bun;
+        for (int i = 0; i < numOfIngridients; i++){
+            burger.ingredients.add(ingredient);
+        }
     }
 }
