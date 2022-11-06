@@ -85,7 +85,7 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
         Mockito.when(bun.getName()).thenReturn(mockName);
         Mockito.when(ingredient.getName()).thenReturn(mockName);
         Mockito.when(ingredient.getType()).thenReturn(type);
-        Mockito.when(burger.getPrice()).thenReturn(10F);
+        //Mockito.when(burger.getPrice()).thenReturn(10F);
 
         Assert.assertEquals("должен возвращаться рецепт бургера", expected, burger.getReceipt());
     }
