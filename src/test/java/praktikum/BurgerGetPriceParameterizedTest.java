@@ -12,8 +12,8 @@ public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTe
 
     private float expected;
 
-    public BurgerGetPriceParameterizedTest(int numOfIngridients, float expected) {
-        super(numOfIngridients);
+    public BurgerGetPriceParameterizedTest(int numOfIngredients, float expected) {
+        super(numOfIngredients);
         this.expected = expected;
     }
 
