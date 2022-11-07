@@ -24,57 +24,57 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
     @Parameterized.Parameters
     public static Object[][] testData(){
         return new Object[][]{
-                {0, "", "(====  ====)\r\n" +
-                        "(====  ====)\r\n" +
-                        "\r\n" +
-                        "Price: 10,000000\r\n"},
+                {0, "", "(====  ====)" + System.lineSeparator() +
+                        "(====  ====)" + System.lineSeparator() +
+                        System.lineSeparator() +
+                        "Price: 10,000000" + System.lineSeparator() },
 
 
 
-                {1, "n", "(==== n ====)\r\n" +
-                        "= filling n =\r\n" +
-                        "(==== n ====)\r\n" +
-                        "\r\n" +
-                        "Price: 20,000000\r\n"},
+                {1, "n", "(==== n ====)" + System.lineSeparator() +
+                        "= filling n =" + System.lineSeparator() +
+                        "(==== n ====)" + System.lineSeparator() +
+                        System.lineSeparator() +
+                        "Price: 20,000000" + System.lineSeparator()},
 
 
 
-                {5, "name", "(==== name ====)\r\n" +
-                        "= filling name =\r\n" +
-                        "= filling name =\r\n" +
-                        "= filling name =\r\n" +
-                        "= filling name =\r\n" +
-                        "= filling name =\r\n" +
-                        "(==== name ====)\r\n" +
-                        "\r\n" +
-                        "Price: 60,000000\r\n"},
+                {5, "name", "(==== name ====)" + System.lineSeparator() +
+                        "= filling name =" + System.lineSeparator() +
+                        "= filling name =" + System.lineSeparator() +
+                        "= filling name =" + System.lineSeparator() +
+                        "= filling name =" + System.lineSeparator() +
+                        "= filling name =" + System.lineSeparator() +
+                        "(==== name ====)" + System.lineSeparator() +
+                        System.lineSeparator() +
+                        "Price: 60,000000" + System.lineSeparator()},
 
 
 
-                {20, "NaMe01!)", "(==== NaMe01!) ====)\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "= filling NaMe01!) =\r\n" +
-                        "(==== NaMe01!) ====)\r\n" +
-                        "\r\n" +
-                        "Price: 210,000000\r\n"}
+                {20, "NaMe01!)", "(==== NaMe01!) ====)" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "= filling NaMe01!) =" + System.lineSeparator() +
+                        "(==== NaMe01!) ====)" + System.lineSeparator() +
+                        System.lineSeparator() +
+                        "Price: 210,000000" + System.lineSeparator()}
         };
     }
 
