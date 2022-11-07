@@ -64,9 +64,4 @@ public class BurgerTest {
         Mockito.verify(burger.ingredients).remove(index);
     }
 
-    @Test
-    public void test(){
-        System.out.println("1" + System.lineSeparator() + "2");
-    }
-
 }
