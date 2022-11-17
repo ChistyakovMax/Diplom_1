@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTest{
+public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTest {
 
     private float expected;
 
@@ -17,8 +17,8 @@ public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTe
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
-    public static Object[][] testData(){
+    @Parameterized.Parameters(name = "burger has {0} ingredients, the cost of burger = {1}")
+    public static Object[][] testData() {
         return new Object[][]{
                 {0, 10F},
                 {1, 20F},
@@ -29,8 +29,8 @@ public class BurgerGetPriceParameterizedTest extends BurgerCommonParameterizedTe
     }
 
     @Test
-    public void getPriceCallMethodReturnPrice(){
-        super.getBurger(numOfIngridients);
+    public void getPriceCallMethodReturnPrice() {
+        super.getBurger(numOfIngredients);
 
         Mockito.when(bun.getPrice()).thenReturn(5F);
         Mockito.when(ingredient.getPrice()).thenReturn(10F);

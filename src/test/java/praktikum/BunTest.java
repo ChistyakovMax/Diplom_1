@@ -1,6 +1,5 @@
 package praktikum;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,19 +12,18 @@ public class BunTest {
     float price = 10;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         bun = new Bun(name, price);
     }
 
     @Test
-    public void getNameCallMethodReturnName(){
-        assertEquals("должно возвращаться наименование булочки",name, bun.getName());
+    public void getNameCallMethodReturnName() {
+        assertEquals("должно возвращаться наименование булочки", name, bun.getName());
     }
 
     @Test
-    public void getPriceCallMetodReturnPrice(){
+    public void getPriceCallMetodReturnPrice() {
         assertEquals("должна возвращаться цена булочки", price, bun.getPrice(), 0);
     }
-
-
+    
 }

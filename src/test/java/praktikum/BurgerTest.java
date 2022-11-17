@@ -31,19 +31,19 @@ public class BurgerTest {
     }
 
     @Test
-    public void setBunsBunHadSet(){
+    public void setBunsBunHadSet() {
         burger.setBuns(bun);
         assertEquals("Булочка должна быть поставлена", bun, burger.bun);
     }
 
     @Test
-    public void addIngredientSetIngredientIngredientadded(){
+    public void addIngredientSetIngredientIngredientAdded() {
         burger.addIngredient(ingredient);
         assertTrue("Список ингридиентов содержит ингридиент", burger.ingredients.contains(ingredient));
     }
 
     @Test
-    public void removeIngredient(){
+    public void removeIngredient() {
         //ingredients.add(ingredient);
         Mockito.when(ingredients.remove(1)).thenReturn(ingredient);
         burger.ingredients = ingredients;
@@ -53,13 +53,13 @@ public class BurgerTest {
     }
 
     @Test
-    public void moveIngredientCallMethodIngridientsMoved(){
+    public void moveIngredientCallMethodIngredientsMoved() {
 
         int index = 1;
         int newIndex = 2;
 
         burger.ingredients = ingredients;
-        burger.moveIngredient(index,newIndex);
+        burger.moveIngredient(index, newIndex);
         Mockito.verify(burger.ingredients).add(newIndex, ingredients.remove(index));
         Mockito.verify(burger.ingredients).remove(index);
     }

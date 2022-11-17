@@ -22,7 +22,7 @@ public class IngredientTest {
 
     @Test
     public void getPriceCallMethodReturnPrice() {
-        assertEquals("должна возвращаться цена ингридиента", price, ingredient.getPrice(),0);
+        assertEquals("должна возвращаться цена ингридиента", price, ingredient.getPrice(), 0);
     }
 
     @Test

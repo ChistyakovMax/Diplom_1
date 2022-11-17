@@ -7,7 +7,7 @@ import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
 
 @RunWith(Parameterized.class)
-public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterizedTest{
+public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterizedTest {
 
     private String mockName;
 
@@ -21,14 +21,14 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
         this.mockName = mockName;
     }
 
-    @Parameterized.Parameters
-    public static Object[][] testData(){
+    //тут не стал использовать name, тестовые данные слишком длинные
+    @Parameterized.Parameters(name = "burger has {0} ingredients, name of ingredients is {1}, the receipt {2}")
+    public static Object[][] testData() {
         return new Object[][]{
                 {0, "", "(====  ====)" + System.lineSeparator() +
                         "(====  ====)" + System.lineSeparator() +
                         System.lineSeparator() +
-                        "Price: 10,000000" + System.lineSeparator() },
-
+                        "Price: 10,000000" + System.lineSeparator()},
 
 
                 {1, "n", "(==== n ====)" + System.lineSeparator() +
@@ -36,7 +36,6 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
                         "(==== n ====)" + System.lineSeparator() +
                         System.lineSeparator() +
                         "Price: 20,000000" + System.lineSeparator()},
-
 
 
                 {5, "name", "(==== name ====)" + System.lineSeparator() +
@@ -48,7 +47,6 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
                         "(==== name ====)" + System.lineSeparator() +
                         System.lineSeparator() +
                         "Price: 60,000000" + System.lineSeparator()},
-
 
 
                 {20, "NaMe01!)", "(==== NaMe01!) ====)" + System.lineSeparator() +
@@ -79,8 +77,8 @@ public class BurgerGetReceiptParameterizedTest extends BurgerCommonParameterized
     }
 
     @Test
-    public void getReceiptCallMethodReturnReceiptAsString(){
-        super.getBurger(numOfIngridients);
+    public void getReceiptCallMethodReturnReceiptAsString() {
+        super.getBurger(numOfIngredients);
 
         Mockito.when(bun.getName()).thenReturn(mockName);
         Mockito.when(ingredient.getName()).thenReturn(mockName);

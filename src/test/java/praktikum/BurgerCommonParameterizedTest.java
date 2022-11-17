@@ -4,7 +4,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-public class BurgerCommonParameterizedTest {
+public abstract class BurgerCommonParameterizedTest {
     @Mock
     Bun bun;
 
@@ -12,15 +12,15 @@ public class BurgerCommonParameterizedTest {
     Ingredient ingredient;
 
     Burger burger;
-    protected  int numOfIngridients; //кол-во ингридиентов в бургере
+    protected int numOfIngredients; //кол-во ингридиентов в бургере
 
-    public BurgerCommonParameterizedTest(int numOfIngridients) {
-        this.numOfIngridients = numOfIngridients;
+    public BurgerCommonParameterizedTest(int numOfIngredients) {
+        this.numOfIngredients = numOfIngredients;
 
     }
 
     //общий метод для создания бургера и наполнения его ингридиентами
-    public void getBurger(int numOfIngridients){
+    public void getBurger(int numOfIngredients) {
         MockitoAnnotations.initMocks(this);
         Mockito.when(bun.getPrice()).thenReturn(5F);
         Mockito.when(ingredient.getPrice()).thenReturn(10F);
@@ -28,7 +28,7 @@ public class BurgerCommonParameterizedTest {
         burger = new Burger();
         burger.bun = bun;
 
-        for (int i = 0; i < numOfIngridients; i++){
+        for (int i = 0; i < numOfIngredients; i++) {
             burger.ingredients.add(ingredient);
         }
     }
